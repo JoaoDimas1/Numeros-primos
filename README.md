@@ -48,6 +48,4 @@ Números primos entre 2 e 15:
 - Este programa verifica se os números digitados são maiores que zero. Caso contrário, exibe uma mensagem de erro e termina a execução.
 - O programa usa o algoritmo de verificação de números primos, que pode ser otimizado para intervalos maiores.
 
----
 
-Espero que este README seja útil para quem quiser utilizar ou entender seu código!
