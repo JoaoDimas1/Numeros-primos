@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "portuguese"); // Configura a localização para exibir mensagens em português
+    int x, y, i, j, primo; // Declaração das variáveis
+
+    printf("Digite o primeiro número:\n"); // Solicita ao usuário o primeiro número
+    scanf("%d", &x); // Lê o primeiro número fornecido pelo usuário
+
+    printf("Digite o segundo número:\n"); // Solicita ao usuário o segundo número
+    scanf("%d", &y); // Lê o segundo número fornecido pelo usuário
+
+    // Verifica se os números são válidos (maiores que zero)
+    if (x <= 0 || y <= 0) {
+        printf("Os números devem ser maiores que 0.\n"); // Exibe uma mensagem de erro
+        return 1; // Retorna 1 para indicar que houve um erro
+    }
+
+    printf("Números primos entre %d e %d:\n", x, y); // Exibe uma mensagem indicando o intervalo de números primos
+
+    // Loop para verificar os números primos no intervalo de x a y
+    for (i = x; i <= y; i++) {
+        if (i <= 1) continue; // Ignora os números menores ou iguais a 1, pois não são primos
+
+        primo = 1; // Assume que o número i é primo
+
+        // Verifica se o número i é primo
+        for (j = 2; j <= i / 2; j++) {
+            if (i % j == 0) {
+                primo = 0; // Se i for divisível por algum número além de 1 e ele mesmo, não é primo
+                break;
+            }
+        }
+
+        // Se i for primo, imprime-o
+        if (primo) {
+            printf("%d\n", i); // Imprime o número primo
+        }
+    }
+
+    return 0; // Retorna 0 para indicar que o programa foi executado com sucesso
+}
