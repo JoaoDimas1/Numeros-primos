@@ -1,9 +1,5 @@
 # Numeros-primos
 
-Claro, aqui está o README para o seu código:
-
----
-
 # Encontrando Números Primos em um Intervalo
 
 Este programa em C permite encontrar e exibir todos os números primos dentro de um intervalo especificado pelo usuário.
